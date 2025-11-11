@@ -206,7 +206,7 @@ const Services = () => {
                 <div className="hidden md:block md:w-1/2 relative mt-8 md:mt-0">
                   <div className="relative z-10 flex justify-center">
                     <img 
-                      src="/src/components/life_style_working_11 - Copy-Photoroom.png" 
+                      src="/images/working-illustration.png" 
                       alt="Person working on a laptop" 
                       className="max-h-[350px] w-auto object-contain"
                     />
