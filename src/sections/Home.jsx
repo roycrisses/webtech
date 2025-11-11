@@ -39,19 +39,32 @@ const Home = () => {
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               <div className="block whitespace-pre-line">
-                <span className="text-white">Simplifying Technology,</span>
+                <EnhancedTypeWriter
+                  text={["Simplifying Technology,"]}
+                  as="span"
+                  typingSpeed={40}
+                  deletingSpeed={30}
+                  pauseDuration={2000}
+                  className="text-white"
+                  textColors={['#ffffff']}
+                  cursorCharacter="|"
+                  cursorClassName="text-purple-400"
+                  startOnVisible={true}
+                  loop={true}
+                />
                 <br />
                 <EnhancedTypeWriter
                   text={["Delivering Excellence"]}
                   as="span"
                   typingSpeed={40}
                   deletingSpeed={30}
-                  pauseDuration={5000}
+                  pauseDuration={2000}
                   className="text-blue-400"
                   textColors={['#60a5fa']}
                   cursorCharacter="|"
                   cursorClassName="text-purple-400"
                   startOnVisible={true}
+                  loop={true}
                 />
               </div>
             </h1>

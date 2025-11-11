@@ -10,6 +10,51 @@
   box-sizing: border-box;
 }
 
+/* Body styles */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Only hide cursor on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  body, * {
+    cursor: none !important;
+  }
+}
+
+/* Make sure the cursor is always on top */
+#cursor, #cursor-border {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+#cursor {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+#cursor-border {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 0.1s ease-out;
+}
+
+/* Simple reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Ensure full width */
 html, body, #root, .app-container {
   width: 100%;

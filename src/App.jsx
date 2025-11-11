@@ -6,6 +6,7 @@ import OurExpertise from './sections/OurExpertise';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import SiteBackground from './components/SiteBackground';
+import CustomCursor from './components/CustomCursor';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="app-container w-full max-w-none relative z-10">
+        <CustomCursor />
         <SiteBackground />
         <section id="home" data-section="home" className="section min-h-screen w-full">
           <Home />
