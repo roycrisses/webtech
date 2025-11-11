@@ -128,7 +128,7 @@ const SiteBackground = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-zinc-900 w-screen">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-black w-screen">
       <canvas 
         ref={canvasRef} 
         className="absolute inset-0 w-screen h-full opacity-60"
