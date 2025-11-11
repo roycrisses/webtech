@@ -180,15 +180,25 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-4">Follow Us</h2>
               <p className="text-gray-300 mb-6">Stay connected on social media</p>
               <div className="flex gap-4">
-                <button className="w-12 h-12 rounded-lg bg-white/10 hover:bg-purple-500/20 transition-colors flex items-center justify-center group">
+                <a 
+                  href="https://www.facebook.com/easywaytech" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-lg bg-white/10 hover:bg-purple-500/20 transition-colors flex items-center justify-center group"
+                >
                   <Facebook className="w-6 h-6 text-gray-400 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </a>
                 <button className="w-12 h-12 rounded-lg bg-white/10 hover:bg-blue-500/20 transition-colors flex items-center justify-center group">
                   <Twitter className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
                 </button>
-                <button className="w-12 h-12 rounded-lg bg-white/10 hover:bg-purple-500/20 transition-colors flex items-center justify-center group">
+                <a 
+                  href="https://www.instagram.com/easyway.technologies/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-lg bg-white/10 hover:bg-purple-500/20 transition-colors flex items-center justify-center group"
+                >
                   <Instagram className="w-6 h-6 text-gray-400 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </a>
                 <button className="w-12 h-12 rounded-lg bg-white/10 hover:bg-blue-500/20 transition-colors flex items-center justify-center group">
                   <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
                 </button>
