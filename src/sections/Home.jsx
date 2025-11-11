@@ -85,64 +85,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Why Choose Us Section */}
-      <div className="py-20 bg-zinc-900/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <RevealOnScroll>
-            <h2 className="text-4xl font-bold text-center mb-16">
-              Why Choose <span className="text-purple-400">Easy Way</span>
-            </h2>
-          </RevealOnScroll>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <RevealOnScroll delay={0.2} className="h-full">
-              <ScaleOnHover>
-                <div className="h-full p-8 bg-purple-950/30 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                  <motion.div 
-                    animate={{ y: [-5, 5, -5] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <Rocket className="w-12 h-12 text-purple-400 mb-4" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold mb-3">Fast Delivery</h3>
-                  <p className="text-gray-400">Quick turnaround times without compromising quality</p>
-                </div>
-              </ScaleOnHover>
-            </RevealOnScroll>
-            
-            <RevealOnScroll delay={0.4} className="h-full">
-              <ScaleOnHover>
-                <div className="h-full p-8 bg-blue-950/30 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                  <motion.div 
-                    animate={{ y: [-5, 5, -5] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  >
-                    <Gem className="w-12 h-12 text-blue-400 mb-4" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold mb-3">Premium Quality</h3>
-                  <p className="text-gray-400">Exceptional results using the latest technologies</p>
-                </div>
-              </ScaleOnHover>
-            </RevealOnScroll>
-            
-            <RevealOnScroll delay={0.6} className="h-full">
-              <ScaleOnHover>
-                <div className="h-full p-8 bg-purple-950/30 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                  <motion.div 
-                    animate={{ y: [-5, 5, -5] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  >
-                    <Headphones className="w-12 h-12 text-purple-400 mb-4" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold mb-3">24/7 Support</h3>
-                  <p className="text-gray-400">Always here to help you succeed</p>
-                </div>
-              </ScaleOnHover>
-            </RevealOnScroll>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

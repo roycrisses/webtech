@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import WavyBackground from './WavyBackground';
 
 const HeroBackground = () => {
   const containerRef = useRef(null);
@@ -129,19 +128,6 @@ const HeroBackground = () => {
         </div>
       ))}
       
-      {/* Wavy background with purple/blue tint */}
-      <div className="absolute inset-0 overflow-hidden">
-        <WavyBackground position="background" />
-      </div>
-      
-      {/* Subtle grid overlay */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: 'linear-gradient(to right, #8b5cf6 1px, transparent 1px), linear-gradient(to bottom, #8b5cf6 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }}
-      />
     </div>
   );
 };
