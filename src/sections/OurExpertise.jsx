@@ -18,10 +18,10 @@ const webDevelopmentTools = [
   { name: 'Python', icon: <FaPython className="w-12 h-12" style={{ color: '#3776AB' }} /> },
   { name: 'Node.js', icon: <FaNodeJs className="w-12 h-12" style={{ color: '#339933' }} /> },
   { name: 'Git', icon: <FaGitAlt className="w-12 h-12" style={{ color: '#F05032' }} /> },
-  { name: 'GitHub', icon: <FaGithub className="w-12 h-12" style={{ color: '#181717' }} /> },
+  { name: 'GitHub', icon: <FaGithub className="w-12 h-12" style={{ color: '#ffffffff' }} /> },
   { name: 'NPM', icon: <FaNpm className="w-12 h-12" style={{ color: '#CB3837' }} /> },
   { name: 'Docker', icon: <FaDocker className="w-12 h-12" style={{ color: '#2496ED' }} /> },
-  { name: 'Figma', icon: <FaFigma className="w-12 h-12" style={{ color: '#F24E1E' }} /> },
+  { name: 'Figma', icon: <FaFigma className="w-12 h-12" style={{ color: '#fcfbfbff' }} /> },
 ];
 
 const appDevelopmentTools = [
