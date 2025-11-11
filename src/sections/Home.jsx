@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles, Rocket, Gem, Headphones } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { RevealOnScroll, FadeIn, SlideInFromLeft, ScaleOnHover } from '../components/Animations';
-import TypeWriter from '../components/TypeWriter';
+import EnhancedTypeWriter from '../components/EnhancedTypeWriter';
 
 const Home = () => {
   const scrollToSection = (target) => {
@@ -12,9 +12,9 @@ const Home = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex flex-col">
+    <section id="home" className="min-h-screen w-full flex flex-col">
       {/* Hero Section */}
-      <div className="flex-1 flex items-center justify-center px-6 py-20">
+      <div className="flex-1 w-full max-w-full flex items-center justify-center px-6 py-20 mx-0">
         <div className="max-w-4xl mx-auto text-center">
           <RevealOnScroll>
             <div className="inline-block mb-8 px-4 py-2 bg-purple-500/10 rounded-full border border-purple-500/20">
@@ -25,15 +25,24 @@ const Home = () => {
                 >
                   <Sparkles className="w-4 h-4" />
                 </motion.span>
-                Simplifying Technology, Delivering Excellence
+                EASYWAY TECHNOLOGIES
               </span>
             </div>
           </RevealOnScroll>
           
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight">
-            The web, made fluid at
-            <br />
-            <span className="text-purple-400">your fingertips.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <EnhancedTypeWriter
+              text={["Simplifying Technology,\nDelivering Excellence"]}
+              as="div"
+              typingSpeed={40}
+              deletingSpeed={30}
+              pauseDuration={5000}
+              className="block whitespace-pre-line"
+              textColors={['#ffffff']}
+              cursorCharacter="|"
+              cursorClassName="text-purple-400"
+              startOnVisible={true}
+            />
           </h1>
           
           <RevealOnScroll delay={0.4}>

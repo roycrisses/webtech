@@ -71,20 +71,20 @@ const OurExpertise = () => {
   }
 
   return (
-    <section id="expertise" className="min-h-screen py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="expertise" className="min-h-screen w-full py-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Our <span className="text-purple-400">Expertise</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            We leverage cutting-edge technologies and tools to deliver exceptional solutions for your business
+            Simplifying Technology, Delivering Excellence
           </p>
         </div>
 
         {/* Categories with Carousels */}
-        <div className="space-y-16">
+        <div className="w-full space-y-16">
           {/* Web Development */}
           <div>
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
@@ -132,8 +132,8 @@ const OurExpertise = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center">
-          <div className="p-12 bg-zinc-900 rounded-2xl border border-blue-500/30">
+        <div className="mt-20 text-center w-full">
+          <div className="w-full max-w-4xl mx-auto p-8 sm:p-12 bg-zinc-900 rounded-2xl border border-blue-500/30">
             <h2 className="text-3xl font-bold mb-4">Impressed by our tech stack?</h2>
             <p className="text-lg text-gray-400 mb-8">
               Let's discuss how we can use these technologies to bring your vision to life

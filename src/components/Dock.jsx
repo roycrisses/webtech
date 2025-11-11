@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 const dockItems = [
   { label: 'Home', target: '#home' },
@@ -12,26 +13,59 @@ const Dock = () => {
   const [activeSection, setActiveSection] = useState('#home')
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'services', 'expertise', 'contact']
-      const scrollPosition = window.scrollY + window.innerHeight / 2
+    const sections = ['home', 'services', 'expertise', 'contact'];
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Trigger when 50% of the section is visible
+    };
 
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(`#${section}`)
-            break
+    const handleIntersect = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          if (sectionId) {
+            setActiveSection(`#${sectionId}`);
           }
         }
+      });
+    };
+
+    const observers = [];
+    
+    // Create an observer for each section
+    sections.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const observer = new IntersectionObserver(handleIntersect, observerOptions);
+        observer.observe(section);
+        observers.push({ observer, element: section });
+      }
+    });
+
+    // Initial check for the first section
+    const firstSection = document.getElementById(sections[0]);
+    if (firstSection) {
+      const rect = firstSection.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        setActiveSection(`#${sections[0]}`);
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    handleScroll() // Initial check
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    // Cleanup function
+    return () => {
+      observers.forEach(({ observer, element }) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []); // Empty dependency array means this runs once on mount
+  
+  // Update URL hash when active section changes
+  useEffect(() => {
+    if (activeSection) {
+      window.history.replaceState(null, '', activeSection);
+    }
+  }, [activeSection]);
 
   const getScale = (index) => {
     if (hoveredIndex === null) return 1
@@ -81,10 +115,28 @@ const Dock = () => {
                   {item.label}
                 </div>
 
-                {/* Active indicator */}
-                {isActive && (
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-purple-400" />
-                )}
+                {/* Active indicator with animation */}
+                <motion.div 
+                  className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full transition-colors ${
+                    isActive ? 'bg-purple-400' : 'bg-gray-500/30'
+                  }`}
+                  initial={false}
+                  animate={{
+                    scale: isActive ? [1, 1.2, 1] : 1,
+                    opacity: isActive ? 1 : 0.3,
+                    y: isActive ? -2 : 0
+                  }}
+                  transition={{
+                    scale: { duration: 0.3, repeat: isActive ? Infinity : 0, repeatType: 'reverse' },
+                    y: { duration: 0.2 },
+                    opacity: { duration: 0.1 }
+                  }}
+                  style={{
+                    boxShadow: isActive 
+                      ? '0 0 10px 2px rgba(167, 139, 250, 0.7)' 
+                      : 'none'
+                  }}
+                />
               </button>
             )
           })}

@@ -1,4 +1,4 @@
-import { Code, Smartphone, Globe, Search, Share2, Video, CheckCircle } from 'lucide-react';
+import { Code, Smartphone, Globe, Search, Share2, Video, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { RevealOnScroll, ScaleOnHover } from '../components/Animations';
 
