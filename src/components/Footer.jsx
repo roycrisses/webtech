@@ -178,9 +178,14 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Easy Way Technology. All rights reserved.
-          </p>
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} Easy Way Technology. All rights reserved.
+            </p>
+            <p className="text-gray-600 text-xs mt-1">
+              Developed by <span className="text-purple-400">Mr. Krishna Karki</span>
+            </p>
+          </div>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
