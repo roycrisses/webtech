@@ -38,18 +38,22 @@ const Home = () => {
             </RevealOnScroll>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              <EnhancedTypeWriter
-                text={["Simplifying Technology,\nDelivering Excellence"]}
-                as="div"
-                typingSpeed={40}
-                deletingSpeed={30}
-                pauseDuration={5000}
-                className="block whitespace-pre-line"
-                textColors={['#ffffff']}
-                cursorCharacter="|"
-                cursorClassName="text-purple-400"
-                startOnVisible={true}
-              />
+              <div className="block whitespace-pre-line">
+                <span className="text-white">Simplifying Technology,</span>
+                <br />
+                <EnhancedTypeWriter
+                  text={["Delivering Excellence"]}
+                  as="span"
+                  typingSpeed={40}
+                  deletingSpeed={30}
+                  pauseDuration={5000}
+                  className="text-blue-400"
+                  textColors={['#60a5fa']}
+                  cursorCharacter="|"
+                  cursorClassName="text-purple-400"
+                  startOnVisible={true}
+                />
+              </div>
             </h1>
             
             <RevealOnScroll delay={0.4}>
