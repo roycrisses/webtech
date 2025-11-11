@@ -160,45 +160,63 @@ const Services = () => {
 
         {/* CTA */}
         <RevealOnScroll>
-          <div className="mt-20 text-center">
-            <ScaleOnHover>
-              <div className="p-12 bg-zinc-900 rounded-2xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300">
-                <motion.h2 
-                  className="text-3xl font-bold mb-4"
-                  whileInView={{ opacity: 1, y: 0 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  Have a project in mind?
-                </motion.h2>
-                <motion.p 
-                  className="text-lg text-gray-400 mb-8"
-                  whileInView={{ opacity: 1, y: 0 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  Let's discuss how we can help bring your ideas to life with our expert services.
-                </motion.p>
-                <motion.div
-                  whileInView={{ opacity: 1, y: 0 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <ScaleOnHover>
-                    <button 
-                      onClick={scrollToContact}
-                      className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 mx-auto"
-                    >
-                      Get in Touch
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </ScaleOnHover>
-                </motion.div>
+          <div className="mt-20">
+            <div className="relative p-8 md:p-12 bg-zinc-900 rounded-2xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 overflow-hidden">
+              <div className="flex flex-col md:flex-row items-center">
+                {/* Text Content */}
+                <div className="md:w-1/2 text-left pr-0 md:pr-8">
+                  <motion.h2 
+                    className="text-3xl md:text-4xl font-bold mb-4"
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    Have a project in mind?
+                  </motion.h2>
+                  <motion.p 
+                    className="text-lg text-gray-400 mb-8 max-w-lg"
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    Let's discuss how we can help bring your ideas to life with our expert services.
+                  </motion.p>
+                  <motion.div
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="inline-block"
+                  >
+                    <ScaleOnHover>
+                      <button 
+                        onClick={scrollToContact}
+                        className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 group"
+                      >
+                        Get in Touch
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </ScaleOnHover>
+                  </motion.div>
+                </div>
+
+                {/* Illustration */}
+                <div className="hidden md:block md:w-1/2 relative mt-8 md:mt-0">
+                  <div className="relative z-10 flex justify-center">
+                    <img 
+                      src="/src/components/life_style_working_11 - Copy-Photoroom.png" 
+                      alt="Person working on a laptop" 
+                      className="max-h-[350px] w-auto object-contain"
+                    />
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-500/10 rounded-full blur-xl"></div>
+                </div>
               </div>
-            </ScaleOnHover>
+            </div>
           </div>
         </RevealOnScroll>
       </div>
