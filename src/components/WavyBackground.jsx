@@ -4,13 +4,24 @@ import { motion } from 'framer-motion';
 const Wave = ({ className = '', flipY = false, opacity = 0.1, speed = 20, delay = 0 }) => (
   <motion.div 
     className={`absolute w-full h-full ${className}`}
-    initial={{ x: '0%' }}
-    animate={{ x: ['0%', '-50%'] }}
+    initial={{ x: '0%', y: 0 }}
+    animate={{ 
+      x: ['0%', '-50%'],
+      y: [0, -8, 0],
+    }}
     transition={{
-      duration: speed,
-      repeat: Infinity,
-      ease: 'linear',
-      delay,
+      x: {
+        duration: speed,
+        repeat: Infinity,
+        ease: 'linear',
+        delay,
+      },
+      y: {
+        duration: 4 + delay,
+        repeat: Infinity,
+        ease: 'easeInOut',
+        delay: delay * 0.5,
+      },
     }}
   >
     <svg 
@@ -19,10 +30,17 @@ const Wave = ({ className = '', flipY = false, opacity = 0.1, speed = 20, delay 
       preserveAspectRatio="none"
       style={{ transform: flipY ? 'scaleY(-1)' : 'none' }}
     >
-      <path 
+      <motion.path 
         d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52.5,583.67,67.8c69.27,15.5,139.33,24.2,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
         className="fill-current"
-        style={{ opacity }}
+        initial={{ opacity }}
+        animate={{ opacity: [opacity, opacity * 1.5, opacity] }}
+        transition={{
+          duration: 3 + delay * 0.5,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: delay * 0.3,
+        }}
       />
     </svg>
   </motion.div>
