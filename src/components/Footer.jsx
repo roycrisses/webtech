@@ -1,9 +1,18 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import WavyBackground from './WavyBackground';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-800 pt-16 pb-8">
+    <footer className="bg-zinc-900 border-t border-zinc-800 py-24 relative overflow-hidden">
+      {/* Background waves */}
+      <WavyBackground position="background" />
+      
+      {/* Top wave */}
+      <WavyBackground position="top" />
+      
+      {/* Bottom wave */}
+      <WavyBackground position="bottom" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* About Section */}
