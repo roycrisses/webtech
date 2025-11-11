@@ -1,9 +1,10 @@
 import InfiniteCarousel from '../components/InfiniteCarousel';
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaPython, FaGitAlt, FaGithub, FaNpm, FaNodeJs, FaReact, 
-  FaAndroid, FaApple, FaJava, FaAws, FaGoogle, FaDigitalOcean, FaDocker, FaFigma,
+  FaAndroid, FaApple, FaJava, FaAws, FaDigitalOcean, FaDocker, FaFigma,
   FaCode, FaMobileAlt, FaPalette, FaDatabase, FaCloud
 } from 'react-icons/fa';
+import { SiGooglecloud } from 'react-icons/si';
 import { 
   SiFlutter, SiKotlin, SiDart, SiXcode, SiAdobexd, SiAdobephotoshop, 
   SiAdobeillustrator, SiSketch, SiInvision, SiMongodb, SiMysql, SiPostgresql, 
@@ -11,55 +12,55 @@ import {
 } from 'react-icons/si';
 
 const webDevelopmentTools = [
-  { name: 'HTML', icon: <FaHtml5 className="w-12 h-12 text-orange-500" /> },
-  { name: 'CSS', icon: <FaCss3Alt className="w-12 h-12 text-blue-500" /> },
-  { name: 'JavaScript', icon: <FaJs className="w-12 h-12 text-yellow-400" /> },
-  { name: 'Python', icon: <FaPython className="w-12 h-12 text-blue-600" /> },
-  { name: 'Node.js', icon: <FaNodeJs className="w-12 h-12 text-green-500" /> },
-  { name: 'Git', icon: <FaGitAlt className="w-12 h-12 text-orange-600" /> },
-  { name: 'GitHub', icon: <FaGithub className="w-12 h-12 text-white" /> },
-  { name: 'NPM', icon: <FaNpm className="w-12 h-12 text-red-500" /> },
-  { name: 'Docker', icon: <FaDocker className="w-12 h-12 text-blue-400" /> },
-  { name: 'Figma', icon: <FaFigma className="w-12 h-12 text-purple-500" /> },
+  { name: 'HTML5', icon: <FaHtml5 className="w-12 h-12" style={{ color: '#E34F26' }} /> },
+  { name: 'CSS3', icon: <FaCss3Alt className="w-12 h-12" style={{ color: '#1572B6' }} /> },
+  { name: 'JavaScript', icon: <FaJs className="w-12 h-12" style={{ color: '#F7DF1E' }} /> },
+  { name: 'Python', icon: <FaPython className="w-12 h-12" style={{ color: '#3776AB' }} /> },
+  { name: 'Node.js', icon: <FaNodeJs className="w-12 h-12" style={{ color: '#339933' }} /> },
+  { name: 'Git', icon: <FaGitAlt className="w-12 h-12" style={{ color: '#F05032' }} /> },
+  { name: 'GitHub', icon: <FaGithub className="w-12 h-12" style={{ color: '#181717' }} /> },
+  { name: 'NPM', icon: <FaNpm className="w-12 h-12" style={{ color: '#CB3837' }} /> },
+  { name: 'Docker', icon: <FaDocker className="w-12 h-12" style={{ color: '#2496ED' }} /> },
+  { name: 'Figma', icon: <FaFigma className="w-12 h-12" style={{ color: '#F24E1E' }} /> },
 ];
 
 const appDevelopmentTools = [
-  { name: 'React Native', icon: <FaReact className="w-12 h-12 text-blue-400" /> },
-  { name: 'Flutter', icon: <SiFlutter className="w-12 h-12 text-blue-400" /> },
-  { name: 'Swift', icon: <FaApple className="w-12 h-12 text-gray-400" /> },
-  { name: 'Kotlin', icon: <SiKotlin className="w-12 h-12 text-purple-500" /> },
-  { name: 'Java', icon: <FaJava className="w-12 h-12 text-red-500" /> },
-  { name: 'Dart', icon: <SiDart className="w-12 h-12 text-blue-400" /> },
-  { name: 'Xcode', icon: <SiXcode className="w-12 h-12 text-blue-500" /> },
-  { name: 'Android', icon: <FaAndroid className="w-12 h-12 text-green-500" /> },
+  { name: 'React Native', icon: <FaReact className="w-12 h-12" style={{ color: '#61DAFB' }} /> },
+  { name: 'Flutter', icon: <SiFlutter className="w-12 h-12" style={{ color: '#02569B' }} /> },
+  { name: 'Swift', icon: <FaApple className="w-12 h-12" style={{ color: '#F05138' }} /> },
+  { name: 'Kotlin', icon: <SiKotlin className="w-12 h-12" style={{ color: '#7F52FF' }} /> },
+  { name: 'Java', icon: <FaJava className="w-12 h-12" style={{ color: '#007396' }} /> },
+  { name: 'Dart', icon: <SiDart className="w-12 h-12" style={{ color: '#0175C2' }} /> },
+  { name: 'Xcode', icon: <SiXcode className="w-12 h-12" style={{ color: '#147EFB' }} /> },
+  { name: 'Android', icon: <FaAndroid className="w-12 h-12" style={{ color: '#3DDC84' }} /> },
 ];
 
 const designTools = [
-  { name: 'Figma', icon: <FaFigma className="w-12 h-12 text-purple-500" /> },
-  { name: 'Adobe XD', icon: <SiAdobexd className="w-12 h-12 text-purple-400" /> },
-  { name: 'Photoshop', icon: <SiAdobephotoshop className="w-12 h-12 text-blue-500" /> },
-  { name: 'Illustrator', icon: <SiAdobeillustrator className="w-12 h-12 text-orange-500" /> },
-  { name: 'Sketch', icon: <SiSketch className="w-12 h-12 text-yellow-500" /> },
-  { name: 'InVision', icon: <SiInvision className="w-12 h-12 text-pink-500" /> },
+  { name: 'Figma', icon: <FaFigma className="w-12 h-12" style={{ color: '#F24E1E' }} /> },
+  { name: 'Adobe XD', icon: <SiAdobexd className="w-12 h-12" style={{ color: '#FF61F6' }} /> },
+  { name: 'Photoshop', icon: <SiAdobephotoshop className="w-12 h-12" style={{ color: '#31A8FF' }} /> },
+  { name: 'Illustrator', icon: <SiAdobeillustrator className="w-12 h-12" style={{ color: '#FF9A00' }} /> },
+  { name: 'Sketch', icon: <SiSketch className="w-12 h-12" style={{ color: '#F7B500' }} /> },
+  { name: 'InVision', icon: <SiInvision className="w-12 h-12" style={{ color: '#FF3366' }} /> },
 ];
 
 const databaseTools = [
-  { name: 'MongoDB', icon: <SiMongodb className="w-12 h-12 text-green-500" /> },
-  { name: 'MySQL', icon: <SiMysql className="w-12 h-12 text-blue-500" /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql className="w-12 h-12 text-blue-400" /> },
-  { name: 'Firebase', icon: <SiFirebase className="w-12 h-12 text-yellow-500" /> },
-  { name: 'Redis', icon: <SiRedis className="w-12 h-12 text-red-500" /> },
-  { name: 'SQLite', icon: <SiSqlite className="w-12 h-12 text-blue-300" /> },
+  { name: 'MongoDB', icon: <SiMongodb className="w-12 h-12" style={{ color: '#47A248' }} /> },
+  { name: 'MySQL', icon: <SiMysql className="w-12 h-12" style={{ color: '#4479A1' }} /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql className="w-12 h-12" style={{ color: '#336791' }} /> },
+  { name: 'Firebase', icon: <SiFirebase className="w-12 h-12" style={{ color: '#FFCA28' }} /> },
+  { name: 'Redis', icon: <SiRedis className="w-12 h-12" style={{ color: '#DC382D' }} /> },
+  { name: 'SQLite', icon: <SiSqlite className="w-12 h-12" style={{ color: '#003B57' }} /> },
 ];
 
 const cloudTools = [
-  { name: 'AWS', icon: <FaAws className="w-12 h-12 text-orange-500" /> },
-  { name: 'Azure', icon: <SiMicrosoftazure className="w-12 h-12 text-blue-500" /> },
-  { name: 'Google Cloud', icon: <FaGoogle className="w-12 h-12 text-blue-400" /> },
-  { name: 'Heroku', icon: <SiHeroku className="w-12 h-12 text-purple-500" /> },
-  { name: 'Vercel', icon: <SiVercel className="w-12 h-12 text-white" /> },
-  { name: 'Netlify', icon: <SiNetlify className="w-12 h-12 text-teal-400" /> },
-  { name: 'DigitalOcean', icon: <FaDigitalOcean className="w-12 h-12 text-blue-400" /> },
+  { name: 'AWS', icon: <FaAws className="w-12 h-12" style={{ color: '#FF9900' }} /> },
+  { name: 'Azure', icon: <SiMicrosoftazure className="w-12 h-12" style={{ color: '#0089D6' }} /> },
+  { name: 'Google Cloud', icon: <SiGooglecloud className="w-12 h-12" style={{ color: '#4285F4' }} /> },
+  { name: 'Heroku', icon: <SiHeroku className="w-12 h-12" style={{ color: '#430098' }} /> },
+  { name: 'Vercel', icon: <SiVercel className="w-12 h-12" style={{ color: '#000000' }} /> },
+  { name: 'Netlify', icon: <SiNetlify className="w-12 h-12" style={{ color: '#00C7B7' }} /> },
+  { name: 'DigitalOcean', icon: <FaDigitalOcean className="w-12 h-12" style={{ color: '#0080FF' }} /> },
 ];
 
 const OurExpertise = () => {
