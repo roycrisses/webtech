@@ -88,7 +88,7 @@ const OurExpertise = () => {
         <div className="w-full space-y-16">
           {/* Web Development */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 pl-6">
               <FaCode className="w-8 h-8 text-purple-400" />
               Web Development
             </h2>
@@ -97,7 +97,7 @@ const OurExpertise = () => {
 
           {/* App Development */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 pl-6">
               <FaMobileAlt className="w-8 h-8 text-purple-400" />
               Mobile App Development
             </h2>
@@ -106,7 +106,7 @@ const OurExpertise = () => {
 
           {/* Design Tools */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 pl-6">
               <FaPalette className="w-8 h-8 text-purple-400" />
               Design & UI/UX
             </h2>
@@ -115,7 +115,7 @@ const OurExpertise = () => {
 
           {/* Database */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 pl-6">
               <FaDatabase className="w-8 h-8 text-purple-400" />
               Database Technologies
             </h2>
@@ -124,7 +124,7 @@ const OurExpertise = () => {
 
           {/* Cloud & DevOps */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 pl-6">
               <FaCloud className="w-8 h-8 text-purple-400" />
               Cloud & Deployment
             </h2>
