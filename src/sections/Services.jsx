@@ -158,44 +158,6 @@ const Services = () => {
           ))}
         </motion.div>
 
-        {/* Process Section */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Discover</h3>
-              <p className="text-gray-400">Understanding your goals and requirements</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Design</h3>
-              <p className="text-gray-400">Creating beautiful and functional designs</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Develop</h3>
-              <p className="text-gray-400">Building with cutting-edge technologies</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Deploy</h3>
-              <p className="text-gray-400">Launching and ongoing support</p>
-            </div>
-          </div>
-        </div>
-
         {/* CTA */}
         <RevealOnScroll>
           <div className="mt-20 text-center">

@@ -4,6 +4,8 @@ import Home from './sections/Home';
 import Services from './sections/Services';
 import OurExpertise from './sections/OurExpertise';
 import Contact from './sections/Contact';
+import Footer from './components/Footer';
+import WavyBackground from './components/WavyBackground';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -61,11 +63,21 @@ class ErrorBoundary extends React.Component {
 function App() {
   return (
     <ErrorBoundary>
-      <div className="app-container w-full max-w-none">
-        <Home />
-        <Services />
-        <OurExpertise />
-        <Contact />
+      <div className="app-container w-full max-w-none relative">
+        <WavyBackground />
+        <section id="home" data-section="home" className="section min-h-screen w-full">
+          <Home />
+        </section>
+        <section id="services" data-section="services" className="section min-h-screen w-full">
+          <Services />
+        </section>
+        <section id="expertise" data-section="expertise" className="section min-h-screen w-full">
+          <OurExpertise />
+        </section>
+        <section id="contact" data-section="contact" className="section min-h-screen w-full">
+          <Contact />
+        </section>
+        <Footer />
         <Dock />
       </div>
     </ErrorBoundary>
